@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct pop_upApp: App {
+    @StateObject private var authManager = AuthManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authManager)
         }
     }
 }
